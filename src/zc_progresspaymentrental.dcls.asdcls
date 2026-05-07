@@ -1,0 +1,11 @@
+@EndUserText.label: 'Progress Payment Rental Access Control'
+@MappingRole: true
+define role ZC_PROGRESSPAYMENTRENTAL {
+    grant
+        select
+            on
+                ZC_PROGRESSPAYMENTRENTAL
+                    where
+                        inheriting conditions from entity ZR_ProgressPaymentRental;
+                        
+}

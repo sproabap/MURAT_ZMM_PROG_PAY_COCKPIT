@@ -1,0 +1,13 @@
+@EndUserText.label: 'Progress Payment Rental Access Control'
+@MappingRole: true
+define role ZR_PROGRESSPAYMENTRENTAL {
+    grant 
+        select
+            on
+                ZR_PROGRESSPAYMENTRENTAL
+                    where
+                        ( VestingModel ) = 
+                        aspect pfcg_auth( ZMMPROGPAY,
+                                          ZMMVSTMDL,
+                                          ACTVT = '03' );
+}

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_VehicleCategoryGlAc_S'
+define service ZUI_VEHICLECATEGORYGLAC {
+  expose ZI_VEHICLECATEGORYGLAC_S as VehicleCategoryGAll;
+  expose ZI_VEHICLECATEGORYGLAC as VehicleCategoryGlAc;
+}

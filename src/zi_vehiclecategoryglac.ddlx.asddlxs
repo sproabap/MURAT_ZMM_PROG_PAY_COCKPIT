@@ -1,0 +1,33 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Vehicle Category GL Account',
+                  typeNamePlural: 'Vehicle Category GL Accounts',
+                  title: { type: #STANDARD, label: 'Vehicle Category GL Account Matching', value: 'CompanyCode' } }
+
+annotate view ZI_VehicleCategoryGlAc with
+
+{
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeStdVH', element: 'CompanyCode' },
+                                        useForValidation: true } ]
+  @UI.facet: [ { id: 'ZI_VehicleCategoryGlAc',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'Vehicle Category GL Account Matching',
+                 position: 1 } ]
+  @UI.identification: [ { position: 1 } ]
+  @UI.lineItem: [ { position: 1 } ]
+  CompanyCode;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_MMVEHICLECATEGORY', element: 'Vehiclecategory' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 2 } ]
+  @UI.lineItem: [ { position: 2 } ]
+  VehicleCategory;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountStdVH', element: 'GLAccount' },
+                                        additionalBinding: [ { element: 'CompanyCode', localElement: 'CompanyCode' } ],
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 3 } ]
+  @UI.lineItem: [ { position: 3 } ]
+  GlAccount;
+}

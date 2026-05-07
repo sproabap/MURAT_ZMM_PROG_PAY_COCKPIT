@@ -1,0 +1,10 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_ProgressPaymentRouteHeader alias ProgPayHeader
+{
+
+  use action createPurchaseOrder;
+  use action updateActualDays;
+
+}

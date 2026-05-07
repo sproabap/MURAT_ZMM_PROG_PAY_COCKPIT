@@ -1,0 +1,12 @@
+@EndUserText.label: 'Progress Payment Rental Service Def.'
+@ObjectModel.leadingEntity.name: 'ZC_ProgressPaymentRental'
+define service ZUI_MM_PROGPAYRENTAL_O2 {
+  expose ZC_ProgressPaymentRental as ProgressPaymentRental;
+  expose I_CalendarYear           as CalendarYearVH;
+  expose I_CalendarMonth          as CalendarMonthVH;
+  expose I_Supplier_VH            as SupplierVH;
+  expose I_ProductStdVH           as ProductVH;
+  expose I_Customer_VH            as CustomerVH;
+  expose I_DistributionChannel    as DistributionChannelVH;
+  expose ZI_VestingModelVH        as TableTypesVH;
+}

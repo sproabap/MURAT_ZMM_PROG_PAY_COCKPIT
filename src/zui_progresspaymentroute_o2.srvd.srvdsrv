@@ -1,0 +1,13 @@
+@EndUserText.label: 'Progress Payment Route Service Def.'
+@ObjectModel.leadingEntity.name: 'ZC_ProgressPaymentRouteHeader'
+define service ZUI_ProgressPaymentRoute_O2 {
+  expose ZC_ProgressPaymentRouteHeader as ProgPayHeader;
+  expose ZC_ProgressPaymentRouteItem   as ProgPayItem;
+  expose I_CalendarYear                as CalendarYearVH;
+  expose I_CalendarMonth               as CalendarMonthVH;
+  expose I_Supplier_VH                 as SupplierVH;
+  expose I_ProductStdVH                as ProductVH;
+  expose I_Customer_VH                 as CustomerVH;
+  expose I_DistributionChannel         as DistributionChannelVH;
+  expose ZI_VestingModelVH             as TableTypesVH;
+}

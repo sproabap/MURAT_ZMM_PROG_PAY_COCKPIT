@@ -1,0 +1,191 @@
+@Metadata.layer: #CUSTOMER
+
+//@UI.headerInfo.typeNamePlural: '#(VestingModelDescription)'
+
+@UI.presentationVariant: [ { requestAtLeast: [ 'SupplierName',
+                                               'ProductName',
+                                               'CustomerName',
+                                               'Vehiclecategorydesc',
+                                               'VehicleTypeDesc',
+                                               'Vehiclebodydesc',
+                                               'Vestingmodeldesc',
+//                                               'DistributionChannelName',
+                                               'DepartureProvinceDesc',
+                                               'departuredistrictDesc',
+                                               'OriginDesc',
+                                               'Arrivalprovincedesc',
+                                               'Arrivaldistrictdesc',
+                                               'DestDesc',
+                                               'TemperatureRegimeDesc',
+                                               'Currency',
+                                               'PurchasingOrganization',
+                                               'PurchasingOrganizationName' ] } ]
+
+annotate entity ZC_ProgressPaymentRouteItem with
+ 
+{
+  @UI.facet: [ { label: 'Item',
+                 id: 'item',
+                 purpose: #STANDARD,
+                 position: 10,
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  CalendarYear;
+
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  CalendarMonth;
+
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  Supplier;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  Product;
+
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+  Customer;
+
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  VehicleCategory;
+
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  VehicleType;
+
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  VehicleBody;
+
+  @UI.identification: [ { position: 82 } ]
+  @UI.lineItem: [ { position: 82 } ]
+  VehicleCapacity;
+
+  @UI.identification: [ { position: 85 } ]
+  @UI.lineItem: [ { position: 85 } ]
+  VestingModel;
+
+//  @UI.identification: [ { position: 87 } ]
+//  @UI.lineItem: [ { position: 87 } ]
+  //  OperationType;
+
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  DepartureProvince;
+
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  DepartureDistrict;
+
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  DeparturePoint;
+
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120 } ]
+  ArrivalProvince;
+
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130 } ]
+  ArrivalDistrict;
+
+  @UI.identification: [ { position: 140 } ]
+  @UI.lineItem: [ { position: 140 } ]
+  ArrivalPoint;
+
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150 } ]
+  HeatRegimeType;
+
+  @UI.hidden: true
+  Currency;
+
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160 } ]
+  ActualTripCount;
+
+  @UI.identification: [ { position: 165 } ]
+  @UI.lineItem: [ { position: 165 } ]
+  ActualKM;
+
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170 } ]
+  VestingAmount;
+
+  @UI.identification: [ { position: 180 } ]
+  @UI.lineItem: [ { position: 180 } ]
+  TotalDeductionAmount;
+
+  @UI.identification: [ { position: 190 } ]
+  @UI.lineItem: [ { position: 190 } ]
+  BonusAmount;
+
+  //  @UI.identification: [ { position: 200 } ]
+  //  @UI.lineItem: [ { position: 200 } ]
+  //  FuelVestingAmount;
+
+  @UI.identification: [ { position: 210 } ]
+  @UI.lineItem: [ { position: 210 } ]
+  VehicleDeductionAmount;
+
+  @UI.identification: [ { position: 220 } ]
+  @UI.lineItem: [ { position: 220 } ]
+  TotalVestingAmount;
+
+  @UI.hidden: true
+  CustomerName;
+
+//  @UI.hidden: true
+  //  DistributionChannelName;
+
+  @UI.hidden: true
+  ProductName;
+
+  @UI.hidden: true
+  SupplierName;
+
+  @UI.hidden: true
+  Vehiclebodydesc;
+
+  @UI.hidden: true
+  Vehiclecategorydesc;
+
+  @UI.hidden: true
+  VehicleTypeDesc;
+
+  @UI.hidden: true
+  Vestingmodeldesc;
+
+  @UI.hidden: true
+  departuredistrictDesc;
+
+  @UI.hidden: true
+  OriginDesc;
+
+  @UI.hidden: true
+  DepartureProvinceDesc;
+
+  @UI.hidden: true
+  Arrivaldistrictdesc;
+
+  @UI.hidden: true
+  DestDesc;
+
+  @UI.hidden: true
+  Arrivalprovincedesc;
+
+  @UI.hidden: true
+  TemperatureRegimeDesc;
+
+  @UI.identification: [ { position: 999 } ]
+  @UI.lineItem: [ { position: 999 } ]
+  PurchasingOrganization;
+
+  @UI.hidden: true
+  PurchasingOrganizationName;
+
+}

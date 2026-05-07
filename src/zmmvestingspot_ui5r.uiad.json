@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Progress Pay Cockpit",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Progress Pay Cockpit"
+  },
+  "ui5AppDetails": {
+    "appId": "hml.zmmvestingspot"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_059FC56E6C681DD81651729CFCC70E28CB34E676_TM",
+    "semanticObject": "zmmvestingspot",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_059FC56E6C681DD81651729CFCC70E28CB34E676_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Progress Pay Cockpit",
+        "subtitle": "Spot"
+      }
+    }
+  ]
+}

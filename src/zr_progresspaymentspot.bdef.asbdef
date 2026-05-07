@@ -1,0 +1,19 @@
+managed implementation in class zbp_r_progresspaymentspot unique;
+strict ( 2 );
+
+define behavior for ZR_ProgressPaymentSpot alias ProgPaySpot
+//persistent table <???>
+lock master
+authorization master ( instance )
+with unmanaged save
+//etag master <field_name>
+{
+  //  create;
+  //  update;
+  //  delete;
+  field ( readonly ) TransportDocNo;
+
+  action createPurchaseOrder parameter ZD_ProgressPaymentSpot result [1] $self;
+  //  action ( features : instance ) createPurchaseOrder parameter ZD_ProgressPaymentSpot result [1] $self;
+  action paymentMade parameter ZD_ProgressPaymentSpot result [1] $self;
+}

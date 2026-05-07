@@ -1,0 +1,11 @@
+@EndUserText.label: 'Progress Payment Spot Service Definition'
+@ObjectModel.leadingEntity.name: 'ZC_ProgressPaymentSpot'
+define service ZUI_MM_PROGPAYSPOT_SRV {
+  expose ZC_ProgressPaymentSpot as ProgressPaymentSpot;
+  expose I_CalendarYear         as CalendarYearVH;
+  expose I_CalendarMonth        as CalendarMonthVH;
+  expose I_Supplier_VH          as SupplierVH;
+  expose I_ProductStdVH         as ProductVH;
+  expose I_Customer_VH          as CustomerVH;
+  expose I_DistributionChannel  as DistributionChannelVH;
+}

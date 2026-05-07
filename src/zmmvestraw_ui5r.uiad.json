@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Vesting Raw Data",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Vesting Raw Data"
+  },
+  "ui5AppDetails": {
+    "appId": "hml.zmmvestraw"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_049AF1995F8D1671CAFC8EB6DD4552F09A2E0F44_TM",
+    "semanticObject": "zmmvestraw",
+    "action": "maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_049AF1995F8D1671CAFC8EB6DD4552F09A2E0F44_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Vesting Raw Data"
+      }
+    }
+  ]
+}

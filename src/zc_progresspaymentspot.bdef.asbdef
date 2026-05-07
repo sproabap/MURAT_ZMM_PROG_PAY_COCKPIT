@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_ProgressPaymentSpot alias ProgPaySpot
+{
+
+  use action createPurchaseOrder;
+  use action paymentMade;
+}

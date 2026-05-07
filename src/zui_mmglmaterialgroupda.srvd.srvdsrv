@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_MmGLMaterialGroupDa_S'
+define service ZUI_MMGLMATERIALGROUPDA {
+  expose ZI_MMGLMATERIALGROUPDA_S as MmGLMaterialGrouAll;
+  expose ZI_MMGLMATERIALGROUPDA as MmGLMaterialGroupDa;
+}

@@ -1,0 +1,10 @@
+projection implementation in class ZBP_C_MM_PRG_PAY_PYMT unique;
+strict ( 2 );
+define behavior for ZC_MM_PRG_PAY_PYMT alias ProgressPaymentSpotPayment
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+}

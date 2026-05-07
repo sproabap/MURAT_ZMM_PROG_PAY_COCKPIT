@@ -1,0 +1,32 @@
+managed implementation in class zbp_r_progresspaymentroutehead unique;
+strict ( 2 );
+
+define behavior for ZR_ProgressPaymentRouteHeader alias ProgPayHeader
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+with unmanaged save
+{
+  //  create;
+  //  update;
+  //  delete;
+  field ( readonly ) CalendarYear, CalendarMonth, Supplier, Product, Customer, PurchasingOrganization;
+  association _Item;
+
+  action createPurchaseOrder parameter ZD_PROGRESSPAYMENTROUTE result [1] $self;
+  action updateActualDays parameter ZD_ProgressPaymentActualDays result [1] $self;
+}
+
+define behavior for ZR_ProgressPaymentRouteItem alias ProgPayItem
+//persistent table <???>
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+with unmanaged save
+{
+  //  update;
+  //  delete;
+  field ( readonly ) CalendarYear, CalendarMonth, Supplier, Product, Customer, DepartureProvince, DepartureDistrict, DeparturePoint, ArrivalProvince, ArrivalDistrict, ArrivalPoint, HeatRegimeType, PurchasingOrganization;
+  association _Header;
+}

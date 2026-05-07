@@ -1,0 +1,193 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Spot Progress Payment',
+                  typeNamePlural: 'Spot Progress Payments',
+                  title: { type: #STANDARD, value: 'TransportDocNo' } }
+
+@UI.lineItem: [ { criticality: 'POStatus' } ]
+
+@UI.presentationVariant: [ { requestAtLeast: [ 'CalendarYear',
+                                               'CalendarMonth',
+                                               'Supplier',
+                                               'Product',
+                                               'Customer',
+                                               'ProductName',
+                                               'VehicleCategory',
+                                               'SpotPaymentPrice',
+                                               'Currency',
+                                               'AdditionalPromotion',
+                                               'Deduction',
+                                               'TotalPrice',
+                                               'SpotFuelAmount',
+                                               'PaymentMade',
+                                               'PaymentMadeStatus',
+                                               'PurchasingOrganization',
+                                               'PurchasingOrganizationName',
+                                               'PurchaseOrder',
+                                               'POStatus',
+                                               'POFilter' ] } ]
+
+annotate entity ZC_ProgressPaymentSpot with
+ 
+{
+  @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CalendarYear', element: 'CalendarYear' } } ]
+  @UI.facet: [ { label: 'General Information',
+                 id: 'GeneralInfo',
+                 purpose: #STANDARD,
+                 position: 10,
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 }
+//                  { position: 11,
+//                    dataAction: 'createPurchaseOrder',
+//                    invocationGrouping: #ISOLATED,
+//                    type: #FOR_ACTION,
+//                    label: 'Create PO' },
+//                  { position: 12,
+//                    dataAction: 'paymentMade',
+//                    invocationGrouping: #ISOLATED,
+//                    type: #FOR_ACTION,
+//                    label: 'Make Payment' }
+                     ]
+  @UI.selectionField: [ { position: 10 } ]
+  CalendarYear;
+
+  @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CalendarMonth', element: 'CalendarMonth' } } ]
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  CalendarMonth;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Supplier_VH', element: 'Supplier' } } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Supplier;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_ProductStdVH', element: 'Product' } } ]
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  Product;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Customer_VH', element: 'Customer' } } ]
+  @UI.identification: [ { position: 45 } ]
+  @UI.lineItem: [ { position: 45 } ]
+  @UI.selectionField: [ { position: 45 } ]
+  Customer;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_DistributionChannel', element: 'DistributionChannel' } } ]
+  @EndUserText.label: 'Operation Type'
+  @UI.identification: [ { position: 47 } ]
+  @UI.lineItem: [ { position: 47 } ]
+  @UI.selectionField: [ { position: 47 } ]
+  OperationType;
+
+  @UI.hidden: true
+  Currency;
+
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  VehicleCategory;
+
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  VehicleType;
+
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  VehicleBody;
+
+  @UI.identification: [ { position: 82 } ]
+  @UI.lineItem: [ { position: 82 } ]
+  VehicleCapacity;
+
+  @UI.hidden: true
+  SupplierName;
+
+  @UI.hidden: true
+  ProductName;
+
+  @UI.hidden: true
+  CustomerName;
+
+  @UI.hidden: true
+  VehicleCategoryDescription;
+
+  @UI.hidden: true
+  VehicleTypeDescription;
+
+  @UI.hidden: true
+  VehicleBodyDescription;
+
+  @UI.identification: [ { position: 85 } ]
+  @UI.lineItem: [ { position: 85 } ]
+  SpotPaymentPrice;
+
+  @UI.identification: [ { position: 105, criticalityRepresentation: #WITHOUT_ICON, criticality: 'PaymentMadeStatus' } ]
+  @UI.lineItem: [ { position: 105, criticalityRepresentation: #WITHOUT_ICON, criticality: 'PaymentMadeStatus' } ]
+  SpotFuelAmount;
+
+//  @UI.identification: [ { position: 90 } ]
+//  @UI.lineItem: [ { position: 90 } ]
+  @UI.hidden: true
+  AdditionalPromotion;
+
+//  @UI.identification: [ { position: 100 } ]
+//  @UI.lineItem: [ { position: 100 } ]
+  @UI.hidden: true
+  Deduction;
+
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  TotalPrice;
+
+  @Consumption.filter.selectionType: #SINGLE
+  @UI.selectionField: [ { position: 50 } ]
+  PaymentMade;
+
+  @UI.hidden: true
+  PaymentMadeStatus;
+
+  @Consumption.filter: { selectionType: #SINGLE, mandatory: true, defaultValue: '1010' }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_PurchasingOrganization', element: 'PurchasingOrganization' } } ]
+  @UI.identification: [ { position: 999 } ]
+  @UI.lineItem: [ { position: 999 } ]
+  @UI.selectionField: [ { position: 5 } ]
+  PurchasingOrganization;
+
+  @UI.hidden: true
+  PurchasingOrganizationName;
+
+  @UI.identification: [ { position: 940 } ]
+  @UI.lineItem: [ { position: 940 } ]
+  BPTaxNumber;
+
+  @UI.identification: [ { position: 945 } ]
+  @UI.lineItem: [ { position: 945 } ]
+  TransportDocNo;
+
+  @UI.identification: [ { position: 950 } ]
+  @UI.lineItem: [ { position: 950 } ]
+  PurchaseOrder;
+  
+  @EndUserText.label: 'Purchasing Document'
+  @UI.identification: [ { position: 960 } ]
+  @UI.lineItem: [ { position: 960 } ]
+  PurchasingHistoryDocument;
+
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'PO Created'
+  @UI.selectionField: [ { position: 55 } ]
+  POFilter;
+  
+  @EndUserText.label: 'Supplier Invoice Reference'
+  @UI.identification: [ { position: 1000 } ]
+  @UI.lineItem: [ { position: 1000 } ]
+  @UI.selectionField: [ { position: 1000 } ]
+  SupplierInvoiceReference;
+  
+
+}

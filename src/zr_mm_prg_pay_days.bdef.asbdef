@@ -1,0 +1,53 @@
+managed implementation in class ZBP_R_MM_PRG_PAY_DAYS unique;
+strict ( 2 );
+define behavior for ZR_MM_PRG_PAY_DAYS alias ProgPayActualDays
+persistent table zmm_prg_pay_days
+etag master LocalLastChangedAt
+lock master
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  CalendarYear,
+  CalendarMonth,
+  Supplier,
+  Product,
+  Customer,
+  PurchasingOrganization;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  CalendarYear,
+  CalendarMonth,
+  Supplier,
+  Product,
+  Customer,
+  PurchasingOrganization;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for zmm_prg_pay_days
+    {
+      CalendarYear           = calendar_year;
+      CalendarMonth          = calendar_month;
+      Supplier               = supplier;
+      Product                = product;
+      Customer               = customer;
+      PurchasingOrganization = purchasingorganization;
+      ActualDays             = actual_days;
+      CreatedBy              = created_by;
+      CreatedAt              = created_at;
+      LastChangedBy          = last_changed_by;
+      LastChangedAt          = last_changed_at;
+      LocalLastChangedAt     = local_last_changed_at;
+    }
+}

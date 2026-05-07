@@ -1,0 +1,268 @@
+@Metadata.layer: #CUSTOMER
+
+//@UI.presentationVariant: [ { requestAtLeast: [ 'Currency' ] } ]
+
+//@UI.headerInfo.typeNamePlural: '#( VestingModelDescription )'
+
+@UI.presentationVariant: [ { requestAtLeast: [ 'CalendarYear',
+                                               'CalendarMonth',
+                                               'Supplier',
+                                               'Product',
+                                               'Customer',
+                                               'ProductName',
+                                               'VehicleCategory',
+                                               'BonusAmount',
+                                               'Currency',
+                                               'BonusAmount',
+                                               'ActualDays',
+                                               'ActualTripCount',
+                                               'ActualKM',
+                                               'FuelVestingAmount',
+                                               'TotalVestingAmount',
+                                               'ScaleDetails',
+                                               'PurchasingOrganization',
+                                               'PurchasingOrganizationName',
+                                               'PurchaseOrder',
+                                               'POStatus',
+                                               'POFilter' ] } ]
+
+annotate entity ZC_ProgressPaymentRental with
+
+{
+  @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CalendarYear', element: 'CalendarYear' } } ]
+  @UI.facet: [ { label: 'General Information',
+                 id: 'GeneralInfo',
+                 purpose: #STANDARD,
+                 position: 10,
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  CalendarYear;
+
+  @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CalendarMonth', element: 'CalendarMonth' } } ]
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  CalendarMonth;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Supplier_VH', element: 'Supplier' } } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Supplier;
+
+  @UI.hidden: true
+  SupplierName;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_ProductStdVH', element: 'Product' } } ]
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  Product;
+
+  @UI.hidden: true
+  ProductName;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Customer_VH', element: 'Customer' } } ]
+  @UI.identification: [ { position: 45 } ]
+  @UI.lineItem: [ { position: 45 } ]
+  @UI.selectionField: [ { position: 45 } ]
+  Customer;
+
+  @UI.hidden: true
+  CustomerName;
+ 
+//  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_DistributionChannel', element: 'DistributionChannel' } } ]
+//  @UI.identification: [ { position: 47 } ]
+//  @UI.lineItem: [ { position: 47 } ]
+//  @UI.selectionField: [ { position: 47 } ]
+//  OperationType;
+
+//  @UI.hidden: true
+//  DistributionChannelName;
+
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+  VehicleCategory;
+
+  @UI.hidden: true
+  VehicleCategoryDescription;
+
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  VehicleType;
+
+  @UI.hidden: true
+  VehicleTypeDescription;
+
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  VehicleBody;
+
+  @UI.hidden: true
+  VehicleBodyDescription;
+
+  @UI.identification: [ { position: 75 } ]
+  @UI.lineItem: [ { position: 75 } ]
+  VehicleCapacity;
+
+  @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_VestingModelVH', element: 'VestingModel' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.selectionField: [ { position: 25 } ]
+  VestingModel;
+
+  @UI.hidden: true
+  VestingModelDescription;
+
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  TargetDays;
+
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  ActualDays;
+
+  @UI.identification: [ { position: 105 } ]
+  @UI.lineItem: [ { position: 105 } ]
+  TargetTripCount;
+
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  ActualTripCount;
+
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120 } ]
+  TargetKM;
+
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130 } ]
+  ActualKM;
+
+  @UI.identification: [ { position: 135 } ]
+  @UI.lineItem: [ { position: 135 } ]
+  TargetPrice;
+
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150 } ]
+  VestingAmount;
+
+  @UI.identification: [ { position: 152 } ]
+  @UI.lineItem: [ { position: 152 } ]
+  AdditionalTripBonusAmount;
+
+  @UI.identification: [ { position: 154 } ]
+  @UI.lineItem: [ { position: 154 } ]
+  KMBonusAmount;
+
+  @UI.identification: [ { position: 156 } ]
+  @UI.lineItem: [ { position: 156 } ]
+  WageDeductionAmount;
+
+  @UI.identification: [ { position: 158 } ]
+  @UI.lineItem: [ { position: 158 } ]
+  KMDeductionAmount;
+
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160 } ]
+  TotalDeductionAmount;
+
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170 } ]
+  BonusAmount;
+
+  @UI.identification: [ { position: 175 } ]
+  @UI.lineItem: [ { position: 175 } ]
+  FuelVestingAmount;
+
+//  @UI.identification: [ { position: 180 } ]
+//  @UI.lineItem: [ { position: 180 } ]
+  //  VehicleDeductionAmount;
+
+  @UI.identification: [ { position: 190 } ]
+  @UI.lineItem: [ { position: 190 } ]
+  TotalVestingAmount;
+
+  @UI.hidden: true
+  Currency;
+
+  @EndUserText.label: 'Scale Details'
+  @UI.identification: [ { position: 200 } ]
+  @UI.lineItem: [ { position: 200 } ]
+  @UI.multiLineText: true
+  ScaleDetails;
+
+  @Consumption.filter: { selectionType: #SINGLE, mandatory: true, defaultValue: '1010' }
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_PurchasingOrganization', element: 'PurchasingOrganization' } } ]
+  @UI.identification: [ { position: 999 } ]
+  @UI.lineItem: [ { position: 999 } ]
+  @UI.selectionField: [ { position: 5 } ]
+  PurchasingOrganization;
+
+  @UI.hidden: true
+  PurchasingOrganizationName;
+
+  @UI.identification: [ { position: 950 } ]
+  @UI.lineItem: [ { position: 950 } ]
+  PurchaseOrder;
+  
+  @EndUserText.label: 'Purchasing Document'
+  @UI.identification: [ { position: 960 } ]
+  @UI.lineItem: [ { position: 960 } ]
+  PurchasingHistoryDocument;
+
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'PO Created'
+  @UI.selectionField: [ { position: 55 } ]
+  POFilter;
+   
+  @EndUserText.label: 'Supplier Invoice Reference'
+  @UI.identification: [ { position: 1000 } ]
+  @UI.lineItem: [ { position: 1000 } ]
+  SupplierInvoiceReference;
+  
+  @EndUserText.label: 'Total Bonus'
+  @UI.identification: [ { position: 1010 } ]
+  @UI.lineItem: [ { position: 1010 } ]
+  TotalBonus;
+  
+  @EndUserText.label: 'Diesel Percentage'
+  @UI.identification: [ { position: 1020 } ]
+  @UI.lineItem: [ { position: 1020 } ]
+  DieselPercentage;
+  @EndUserText.label: 'Operation Region'
+  @UI.identification: [ { position: 1030 } ]
+  @UI.lineItem: [ { position: 1030 } ]
+  OperationRegion;
+  @EndUserText.label: 'Total Fuel Taken Litre'
+  @UI.identification: [ { position: 1050 } ]
+  @UI.lineItem: [ { position: 1050 } ]
+  total_fuel_taken_liters;
+  @EndUserText.label: 'Difference Litre'
+  @UI.identification: [ { position: 1060 } ]
+  @UI.lineItem: [ { position: 1060 } ]
+  diff_liters;
+  @EndUserText.label: 'Calculated Earned Litre'
+  @UI.identification: [ { position: 1070 } ]
+  @UI.lineItem: [ { position: 1070 } ]
+  earned_liter;
+   @EndUserText.label: 'Total Deduction Amount'
+  @UI.identification: [ { position: 1080 } ]
+  @UI.lineItem: [ { position: 1080 } ]
+  TotalDeducamount;
+  @EndUserText.label: 'Total Fuel Entitlement Excluding VAT TL'
+  @UI.identification: [ { position: 1090 } ]
+  @UI.lineItem: [ { position: 1090 } ]
+  total_fuel_ent_ex_vat;
+  @EndUserText.label: 'Total Fuel Cost Excluding VAT TL'
+  @UI.identification: [ { position: 1100 } ]
+  @UI.lineItem: [ { position: 1100 } ]
+  total_fuel_cost_exc_vat;
+ 
+ 
+}

@@ -1,0 +1,65 @@
+managed implementation in class ZBP_R_MM_PROG_PAY unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MM_PROG_PAY alias ProgressPayment
+persistent table zmm_prog_pay
+draft table zmm_prog_pay_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  Transportdocno;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  Transportdocno;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zmm_prog_pay
+    {
+      Transportdocno             = transportdocno;
+      Supplier                   = supplier;
+      Product                    = product;
+      Customer                   = customer;
+      TransportationCreationDate = transportdoc_creationdate;
+      TransportationStartdate    = transportation_startdate;
+      TransportationEndDate      = transportation_enddate;
+      NumberOfTrips              = number_of_trips;
+      TotalKm                    = total_km;
+      SpotPaymentPrice           = spot_payment_price;
+      SpotFuelAmount             = spot_fuel_amount;
+      DepartureProvince          = departure_province;
+      DepartureDistrict          = departure_district;
+      DeparturePoint             = departure_point;
+      ArrivalProvince            = arrival_province;
+      ArrivalDistrict            = arrival_district;
+      ArrivalPoint               = arrival_point;
+      HeatRegimeType             = heat_regime_type;
+      OperationType              = operation_type;
+      IsDeleted                  = is_deleted;
+      Currency                   = currency;
+      CreatedBy                  = created_by;
+      CreatedAt                  = created_at;
+      LastChangedBy              = last_changed_by;
+      LastChangedAt              = last_changed_at;
+      LocalLastChangedAt         = local_last_changed_at;
+    }
+}

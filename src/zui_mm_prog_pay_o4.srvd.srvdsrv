@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MM_PROG_PAY'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MM_PROG_PAY'
+  }
+}
+define service ZUI_MM_PROG_PAY_O4 provider contracts odata_v4_ui {
+  expose ZC_MM_PROG_PAY as ProgressPayment;
+}

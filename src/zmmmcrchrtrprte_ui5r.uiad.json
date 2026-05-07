@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Progress Pay Cockpit",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Progress Pay Cockpit"
+  },
+  "ui5AppDetails": {
+    "appId": "hml.zmmmicrochartertriproute"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7D1666AA25B3B1FD5D39D98FA51A6DA1BF33A70C_TM",
+    "semanticObject": "zmmmicrochartertriproute",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7D1666AA25B3B1FD5D39D98FA51A6DA1BF33A70C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Progress Pay Cockpit",
+        "subtitle": "Route Based"
+      }
+    }
+  ]
+}

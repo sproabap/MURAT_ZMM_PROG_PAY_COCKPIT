@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Progress Payment Cockpit Message Class</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp;1 malzemesi için PYP bulunamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp;1 tedarikçisi ve &amp;2 malzemesi için SAS yaratıldı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>&amp;1 malzemesi için DK hesabı eşleşmesi bulunamadı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Spot araçlar için PYP tanımlanmamış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>&amp;1 seferi için SAS önceden yaratıldı</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>SAS &amp;1 satıcısı ve &amp;2 malzesis için önceden yaratılmış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>&amp;1 seferi için SAS yaratılmamış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Yakıt ödemesi &amp;1 seferi için önceden yapılmış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Yakıt tutarı boş, ödeme yapılamaz</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Kayıt tarihi giriniz</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>&amp;1 seferi için mutabakat henüz yapılmamış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>&amp;1 seferi için mutabakat henüz yapılmamış</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <MSGNR>013</MSGNR>
+    </T100>
+   </T100>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_PROG_PAY_COCKPIT</ARBGB>
+     <STEXT>Progress Payment Cockpit Message Class</STEXT>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>No project found for product &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>Purchase Order created for Supplier &amp;1 and Product &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>003</MSGNR>
+     <TEXT>No G/L account matching found for product group &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>004</MSGNR>
+     <TEXT>No WBS element maintained for spot vehicles</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>PO already created for transporation document &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>006</MSGNR>
+     <TEXT>PO already created for supplier &amp;1 and material &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>007</MSGNR>
+     <TEXT>PO not created for transportation document &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>008</MSGNR>
+     <TEXT>Fuel payment is already made for transpotation document &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>009</MSGNR>
+     <TEXT>Spot Fuel Amount is intial, no payment can be made</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>Enter Posting Date</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>011</MSGNR>
+     <TEXT>Reconciliation hasn&apos;t been made for Transportation Document: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>012</MSGNR>
+     <TEXT>Reconciliation hasn&apos;t been made for Transportation Document: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>013</MSGNR>
+     <TEXT>No GL Account found for Company Code &amp;1 and Vehicle Category &amp;2</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

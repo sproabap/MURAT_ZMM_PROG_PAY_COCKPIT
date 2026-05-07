@@ -1,0 +1,11 @@
+@EndUserText.label: 'Vesting Model Value Help Access Control'
+@MappingRole: true
+define role ZI_VESTINGMODELVH {
+    grant
+        select
+            on
+                ZI_VestingModelVH
+                    where
+                        inheriting conditions from entity ZR_ProgressPaymentRental;
+                        
+}

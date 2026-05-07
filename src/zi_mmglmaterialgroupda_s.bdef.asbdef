@@ -1,0 +1,65 @@
+managed implementation in class ZBP_I_MMGLMATERIALGROUPDA_S unique;
+strict;
+with draft;
+define behavior for ZI_MmGLMaterialGroupDa_S alias MmGLMaterialGrouAll
+draft table ZMM_T_MATL__D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _MmGLMaterialGroupDa { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_MmGLMaterialGroupDa alias MmGLMaterialGroupDa ##UNMAPPED_FIELD
+persistent table ZMM_T_MATL_GRP
+draft table ZMM_T_MATL_GR_D
+lock dependent by _MmGLMaterialGrouAll
+authorization dependent by _MmGLMaterialGrouAll
+
+{
+  field ( mandatory : create )
+   Companycode,
+   Materialgroup;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Companycode,
+   Materialgroup;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZMM_T_MATL_GRP
+  {
+    Companycode = COMPANYCODE;
+    Materialgroup = MATERIALGROUP;
+    Glaccount = GLACCOUNT;
+  }
+
+  association _MmGLMaterialGrouAll { with draft; }
+}

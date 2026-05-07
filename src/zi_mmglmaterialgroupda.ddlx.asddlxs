@@ -1,0 +1,35 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'MmGLMaterialGroupDa',
+                  typeNamePlural: 'MmGLMaterialGroupDas',
+                  title: { type: #STANDARD, label: 'MM G/L Material Group Database Table', value: 'Companycode' } }
+
+annotate view ZI_MmGLMaterialGroupDa with
+
+{
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' },
+                                        useForValidation: true } ]
+  @UI.facet: [ { id: 'ZI_MmGLMaterialGroupDa',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'MM G/L Material Group Database Table',
+                 position: 1 } ]
+  @UI.identification: [ { position: 1 } ]
+  @UI.lineItem: [ { position: 1 } ]
+  Companycode;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_ProductGroup_2', element: 'ProductGroup' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 2 } ]
+  @UI.lineItem: [ { position: 2 } ]
+  Materialgroup;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountStdVh', element: 'GLAccount' },
+                                        useForValidation: true,
+                                        additionalBinding: [ { element: 'CompanyCode',
+                                                               localElement: 'Companycode',
+                                                               usage: #FILTER_AND_RESULT } ] } ]
+  @UI.identification: [ { position: 3 } ]
+  @UI.lineItem: [ { position: 3 } ]
+  Glaccount;
+}

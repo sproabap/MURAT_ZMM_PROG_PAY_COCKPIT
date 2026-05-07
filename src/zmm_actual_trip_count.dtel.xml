@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZMM_ACTUAL_TRIP_COUNT</ROLLNAME>
+    <DDLANGUAGE>T</DDLANGUAGE>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Gerçekleşen Sefer Sayısı</DDTEXT>
+    <REPTEXT>Gerçekleşen Sefer Sayısı</REPTEXT>
+    <SCRTEXT_S>Grçk Sefer</SCRTEXT_S>
+    <SCRTEXT_M>Gerçekleşen Sefer</SCRTEXT_M>
+    <SCRTEXT_L>Gerçekleşen Sefer Sayısı</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <DATATYPE>INT4</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000011</OUTPUTLEN>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Actual Trip Count</DDTEXT>
+     <REPTEXT>Actual Trip Count</REPTEXT>
+     <SCRTEXT_S>Act. Trip</SCRTEXT_S>
+     <SCRTEXT_M>Actual Trip</SCRTEXT_M>
+     <SCRTEXT_L>Actual Trip Count</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

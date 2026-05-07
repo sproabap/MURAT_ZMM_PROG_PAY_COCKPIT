@@ -1,0 +1,160 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: { title: { type: #STANDARD, value: 'Transportdocno' },
+                  description: { type: #STANDARD, value: 'Transportdocno' } }
+
+annotate view ZC_MM_PROG_PAY with
+
+{
+  @UI.facet: [ { label: 'General Information',
+                 id: 'GeneralInfo',
+                 purpose: #STANDARD,
+                 position: 10,
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  Transportdocno;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Supplier_VH', element: 'Supplier' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  Supplier;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_ProductStdVH', element: 'Product' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Product;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Customer_VH', element: 'Customer' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 35 } ]
+  @UI.lineItem: [ { position: 35 } ]
+  @UI.selectionField: [ { position: 35 } ]
+  Customer;
+
+  @UI.identification: [ { position: 37 } ]
+  @UI.lineItem: [ { position: 37 } ]
+  @UI.selectionField: [ { position: 37 } ]
+  TransportationCreationDate;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  TransportationStartdate;
+
+  @UI.identification: [ { position: 41 } ]
+  @UI.lineItem: [ { position: 41 } ]
+  @UI.selectionField: [ { position: 41 } ]
+  TransportationEndDate;
+
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+  @UI.selectionField: [ { position: 50 } ]
+  NumberOfTrips;
+
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  @UI.selectionField: [ { position: 60 } ]
+  TotalKm;
+
+  @UI.identification: [ { position: 69 } ]
+  @UI.lineItem: [ { position: 69 } ]
+  @UI.selectionField: [ { position: 69 } ]
+  SpotPaymentPrice;
+
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  @UI.selectionField: [ { position: 70 } ]
+  SpotFuelAmount;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_DEPARTUREPROVINCES', element: 'DepartureProvince' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 71 } ]
+  @UI.lineItem: [ { position: 71 } ]
+  @UI.selectionField: [ { position: 71 } ]
+  DepartureProvince;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_DEPARTUREDISTRICTs', element: 'DepartureDistrict' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 72 } ]
+  @UI.lineItem: [ { position: 72 } ]
+  @UI.selectionField: [ { position: 72 } ]
+  DepartureDistrict;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_ORIGINPOINT', element: 'OriginPoint' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 73 } ]
+  @UI.lineItem: [ { position: 73 } ]
+  @UI.selectionField: [ { position: 73 } ]
+  DeparturePoint;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_ARRIVALPROVINCES', element: 'ArrivalProvince' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 74 } ]
+  @UI.lineItem: [ { position: 74 } ]
+  @UI.selectionField: [ { position: 74 } ]
+  ArrivalProvince;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_ARRIVALDISTRICT', element: 'Arrivaldistrict' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 75 } ]
+  @UI.lineItem: [ { position: 75 } ]
+  @UI.selectionField: [ { position: 75 } ]
+  ArrivalDistrict;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_DESTINATIONPOINT', element: 'DestinationPoint' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 76 } ]
+  @UI.lineItem: [ { position: 76 } ]
+  @UI.selectionField: [ { position: 76 } ]
+  ArrivalPoint;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_TEMPERATUREREGIME', element: 'TemperatureRegime' },
+                                        useForValidation: true } ]
+  @UI.identification: [ { position: 77 } ]
+  @UI.lineItem: [ { position: 77 } ]
+  @UI.selectionField: [ { position: 77 } ]
+  HeatRegimeType;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_DistributionChannel', element: 'DistributionChannel' },
+                                        useForValidation: true } ]
+  @EndUserText.label: 'Operation Type'
+  @UI.identification: [ { position: 78 } ]
+  @UI.lineItem: [ { position: 78 } ]
+  @UI.selectionField: [ { position: 78 } ]
+  OperationType;
+
+  @UI.identification: [ { position: 79 } ]
+  @UI.lineItem: [ { position: 79 } ]
+  IsDeleted;
+
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.selectionField: [ { position: 80 } ]
+  CreatedBy;
+
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  @UI.selectionField: [ { position: 90 } ]
+  CreatedAt;
+
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  @UI.selectionField: [ { position: 100 } ]
+  LastChangedBy;
+
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  @UI.selectionField: [ { position: 110 } ]
+  LastChangedAt;
+
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120 } ]
+  @UI.selectionField: [ { position: 120 } ]
+  LocalLastChangedAt;
+}
